@@ -1,0 +1,68 @@
+main {
+    text-align: center;
+  
+  }
+  /* Header content styles */
+.header-image {
+  width: 100%;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.header-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.header-image h1 {
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+  
+  .home-heading {
+    display: inline-block;
+  }
+  .book-cards-wrapper, .author-cards-wrapper {
+    max-width: 64%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  
+  .explore-books .home-heading{
+      color: rgb(255, 179, 0);
+      border-bottom: 1px solid rgb(255, 179, 0);
+      font-size: 35px;
+      padding: 10px;
+       margin-bottom: 2px;
+  }
+
+  .home-heading {
+      margin-top: 0;
+  }
+
+  
+  .explore-authors {
+    margin-top: 50px;
+    background: rgb(255, 179, 0);
+}
+
+.explore-authors .home-heading {
+  color: black;
+  border-bottom: 1px solid black;
+  font-size: 35px;
+  padding: 10px;
+   margin-bottom: 2px;
+}
+
+.explore-authors, .explore-books {
+  padding: 50px;
+}
