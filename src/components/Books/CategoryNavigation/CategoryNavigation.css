@@ -1,0 +1,9 @@
+.books-categories-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .books-categories-nav ul li a:active{
+    color: rgb(255, 179, 0);
+    
+  }

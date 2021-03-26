@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     border: 2px solid white;
-    margin: 10px;
+    margin: 10px auto;
   }
   
   .image-author-card-wrapper {

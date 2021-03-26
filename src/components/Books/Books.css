@@ -1,0 +1,14 @@
+.book-cards-wrapper-books-page {
+    max-width: 95%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  .books-page-heading {
+    color: rgb(255, 179, 0);
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 1px solid rgb(255, 179, 0);
+  }
