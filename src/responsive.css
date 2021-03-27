@@ -1,0 +1,46 @@
+@media all and (min-device-width: 1500px) and (max-device-width: 1880px) {
+  .book-cards-wrapper {
+    max-width: 80% !important;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .main-menu-wrapper {
+    max-height: none;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .header-image h1 {
+    top: 555px;
+    font-weight: 100;
+  }
+
+  .header-image img {
+    height: 400px;
+  }
+
+  .book-cards-wrapper {
+    max-width: none;
+  }
+
+  .form-container {
+    max-width: 80%;
+  }
+
+  .details-section-wrapper {
+    max-width: 97%;
+  }
+  .books-details-image {
+    width: 50%;
+  }
+}

@@ -1,6 +1,6 @@
 import './Books.css';
-import './CategoryNavigation/CategoryNavigation';
-import '../BookCard/BookCard';
+import CategoryNavigation from './CategoryNavigation/CategoryNavigation';
+import BookCard from '../BookCard/BookCard';
 
 const Books = () => {
     return (

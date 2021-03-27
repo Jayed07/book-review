@@ -4,7 +4,7 @@ const BookCard = () => {
     return (
         <div class="book-card-wrapper">
   <div class="image-book-card-wrapper">
-    <img src="./img/book-cover.jpg" alt="" />
+    <img src="/img/book-cover.jpg" alt="" />
   </div>
   <div class="content-book-card-wrapper">
     <h3 class="heading-book-card">Book Title</h3>

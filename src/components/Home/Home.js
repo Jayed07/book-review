@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
+
 import './Home.css';
-import BookCard from '../BookCard/BookCard'
-import AuthorCard from '../AuthorCard/AuthorCard';
+import BookCard from '../BookCard/BookCard';
 
 const Home = () => {
     return(
@@ -18,19 +19,12 @@ const Home = () => {
         <div class="book-cards-wrapper">
           <BookCard />
           <BookCard />
+          <BookCard />
         </div>
-        <a href="" class="view-all-home-button">View All</a>
+        <Link to="/books" class="view-all-home-button">View All</Link>
         </section>
         
-        <section class="explore-authors">
-        <h1 class="home-heading">Explore Authors</h1>
-
-        <div class="book-cards-wrapper">
-          <AuthorCard />
-          <AuthorCard />
-        </div>
-        <a href="" class="view-all-home-button">View All</a>
-      </section>
+        
         
 </main>
 </>

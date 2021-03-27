@@ -1,0 +1,10 @@
+.my-profile-wrappper {
+    text-align: center;
+}
+
+.my-profile-heading {
+    color: rgb(255, 179, 0);
+    border-bottom: 1px solid rgb(255, 179, 0);
+    padding: 10px;
+    font-size: 50px;
+}

@@ -1,0 +1,62 @@
+.details-section-wrapper {
+    max-width: 50%;
+    margin: 10px auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    max-height: 700px;
+    
+   }
+ 
+   .book-details-img {
+     width: 100%;
+     object-fit: cover;
+     border-radius: 5px;
+     margin-right: 10px;
+   }
+ 
+   .info-details-wrapper {
+     
+     color: white;
+   }
+ 
+   .first-section {
+     border-bottom: 1px solid white;
+     max-width: 90%;
+     margin: 5px;
+     
+   }
+ 
+   .book-rating-details {
+     border-right: 1px solid white;
+     padding-right: 10px;
+   }
+
+   .book-votes-details {
+       margin-left: 10px;
+   }
+ 
+   .buttons-wrapper, .created-by-buttons {
+     padding: 20px;
+   }
+ 
+   .buttons-wrapper {
+     margin-top: 50px;
+   }
+ 
+   .review-button, .rating-button, .edit-button, .delete-button {
+     padding: 10px;
+     margin: 2px;
+     font-weight: bold;
+     text-decoration: none;
+     border-radius: 5px;
+     color: black;
+   }
+ 
+   .review-button, .rating-button {
+     background: rgb(255, 179, 0);
+   }
+ 
+   .edit-button, .delete-button {
+     background: white;
+   }
