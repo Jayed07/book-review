@@ -1,7 +1,7 @@
 const AddReview = () => {
     return (
-        <main class="content-wrapper">
-            <div class="form-container">
+        <main className="content-wrapper">
+            <div className="form-container">
                 <h1>Add Book Review</h1>
                 <form action="">
                 <label for="review">Book review</label>

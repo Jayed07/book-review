@@ -1,7 +1,20 @@
-const AddRating = () => {
+import * as booksService from '../../service/booksService';
+
+
+const AddRating = ({
+    history,
+}) => {
+
+    // onCreateRatingSubmitHandler = (e) => {
+    //     e.preventDefault();
+
+    //     const { rating } = e.target;
+
+        
+    // }
     return (
         <main className="content-wrapper">
-            <div class="form-container">
+            <div className="form-container">
                 <h1>Add Book</h1>
                 <form action="">
 

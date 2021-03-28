@@ -6,22 +6,22 @@ import BookCard from '../BookCard/BookCard';
 const Home = () => {
     return(
       <>
-        <div class="header-image content-wrapper">
+        <div className="header-image content-wrapper">
         <img src="./img/header-image.jpg" alt=""/>
         <h1>Free online book reviewer</h1>
         </div>
         
-        <main class="content-wrapper">
+        <main className="content-wrapper">
 
-        <section class="explore-books">
-        <h1 class="home-heading">Explore Books</h1>
+        <section className="explore-books">
+        <h1 className="home-heading">Explore Books</h1>
 
-        <div class="book-cards-wrapper">
+        <div className="book-cards-wrapper">
           <BookCard />
           <BookCard />
           <BookCard />
         </div>
-        <Link to="/books" class="view-all-home-button">View All</Link>
+        <Link to="/books" className="view-all-home-button">View All</Link>
         </section>
         
         

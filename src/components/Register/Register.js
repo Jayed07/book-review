@@ -1,7 +1,7 @@
 const Register = () => {
     return (
-        <main class="content-wrapper">
-            <div class="form-container">
+        <main className="content-wrapper">
+            <div className="form-container">
                 <h1>Register</h1>
                 <form action="">
                     <label for="username">Username</label>

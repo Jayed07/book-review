@@ -1,26 +1,36 @@
+import { Link } from 'react-router-dom';
+
 import './BookCard.css'
 
-const BookCard = () => {
+const BookCard = ({
+  id,
+  title,
+  author,
+  description,
+  category,
+  rating,
+  imageUrl,
+  votes,
+}) => {
     return (
-        <div class="book-card-wrapper">
-  <div class="image-book-card-wrapper">
-    <img src="/img/book-cover.jpg" alt="" />
+      <Link to={`/books/details/${id}`}>
+        <div className="book-card-wrapper">
+  <div className="image-book-card-wrapper">
+    <img src={imageUrl} alt="" />
   </div>
-  <div class="content-book-card-wrapper">
-    <h3 class="heading-book-card">Book Title</h3>
-    <div class="info-book-card">
-    <span class="rating"><i class="fas fa-star"></i>4.5</span>
-    <span class="category">Action, Drama Action</span>
+  <div className="content-book-card-wrapper">
+    <h3 className="heading-book-card">{title}</h3>
+    <div className="info-book-card">
+    <span className="rating"><i className="fas fa-star"></i>{rating}</span>
+    <span className="category">{category}</span>
   </div>
-    <p class="description-book-card">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ab
-      deleniti at dolorum maiores ratione. Accusantium molestiae perspiciatis
-      assumenda excepturi cum labore! Ab tempora eaque optio fugit unde dicta
-      magnam.
+    <p className="description-book-card">
+      {description}
     </p>
-    <span class="votes">Votes: 0</span>
+    <span className="votes">Votes: {votes}</span>
   </div>
 </div>
+</Link>
     );
 };
 

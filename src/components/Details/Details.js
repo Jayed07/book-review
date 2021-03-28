@@ -1,34 +1,43 @@
 import './Details.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import * as booksService from '../../service/booksService';
 
-const Details = () => {
+const Details = ({
+  match,
+}) => {
+  let [book, setBook] = useState({});
+
+  useEffect(() => {
+    booksService.getOne(match.params.bookId)
+    .then(res => setBook(res));
+  }, []);
+
+  
     return (
         <main className="content-wrapper">
-        <div class="details-section-wrapper">
-        <img class="book-details-img" src="/img/book-cover.jpg" alt="" />
+        <div className="details-section-wrapper">
+        <img className="book-details-img" src={book.imageUrl} alt="" />
 
-        <div class="info-details-wrapper">
-          <div class="first-section">
-            <h1 class="book-title-details">Book title</h1>
-            <h2 class="book-category-details">Book Category</h2>
-            <p class="book-description-details">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              libero deserunt nihil, dolorum quibusdam qui dolorem eum amet
-              praesentium pariatur explicabo doloremque. Nesciunt, quae?
-              Molestias tempora eius consequatur ratione placeat?
+        <div className="info-details-wrapper">
+          <div className="first-section">
+            <h1 className="book-title-details">{book.title}</h1>
+            <h2 className="book-category-details">Category: {book.category}</h2>
+            <p className="book-description-details">
+              {book.description}
             </p>
           </div>
-          <div class="second-section">
-              <h2 class="book-author-details">Author: Pesho</h2>
-              <span class="book-rating-details">Rating: 3</span>
-              <span class="book-votes-details">Votes: 3</span>
-              <div class="buttons-wrapper">
-              <Link to="/books/details/add-review" class="review-button">Add Review</Link>
-              <Link to="/books/details/add-rating" class="rating-button">Add rating</Link>
+          <div className="second-section">
+              <h2 className="book-author-details">Author: {book.author}</h2>
+              <span className="book-rating-details">Rating: {book.rating}</span>
+              <span className="book-votes-details">Votes: {book.votes}</span>
+              <div className="buttons-wrapper">
+              <Link to={`/books/details/${book.id}/add-review`} className="review-button">Add Review</Link>
+              <Link to={`/books/details/${book.id}/add-rating`} className="rating-button">Add rating</Link>
             </div>
-            <div class="created-by-buttons">
-              <a href="" class="edit-button">Edit Book</a>
-              <a href="" class="delete-button">Delete Book</a>
+            <div className="created-by-buttons">
+              {/* <a href="#" className="edit-button">Edit Book</a>
+              <a href="#" className="delete-button">Delete Book</a> */}
             </div>
           </div>
         </div>

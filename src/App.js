@@ -21,12 +21,13 @@ function App() {
 
 
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/books" exact component={Books} />
-        <Route path="/books/details" exact component={Details} />
-        <Route path="/books/details/add-review" component={AddReview} />
-        <Route path="/books/details/add-rating" component={AddRating} />
-        <Route path="/books/create" component={AddBook} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/books"  component={Books} />
+        <Route path="/books/:category" exact component={Books} />
+        <Route exact path="/books/details/:bookId" component={Details} />
+        <Route path="/books/details/:bookId/add-review" component={AddReview} />
+        <Route path="/books/details/:bookId/add-rating" component={AddRating} />
+        <Route path="/create"  component={AddBook} />
         <Route path="/users/profile" component={MyProfile} />
         <Route path="/users/login" component={Login} />
         <Route path="/users/register" component={Register} />
