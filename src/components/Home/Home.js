@@ -1,9 +1,25 @@
 import { Link } from 'react-router-dom';
+import { Component } from 'react';
+import * as booksService from '../../service/booksService';
 
 import './Home.css';
 import BookCard from '../BookCard/BookCard';
 
-const Home = () => {
+class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      books: [],
+    }
+  }
+
+  componentDidMount() {
+    booksService.getAll()
+    .then(res => {this.setState({books: res})})
+  }
+
+  render() {
     return(
       <>
         <div className="header-image content-wrapper">
@@ -17,9 +33,9 @@ const Home = () => {
         <h1 className="home-heading">Explore Books</h1>
 
         <div className="book-cards-wrapper">
-          <BookCard />
-          <BookCard />
-          <BookCard />
+        {this.state.books.map(x => 
+            <BookCard key={x.id} {...x}/>
+            )} 
         </div>
         <Link to="/books" className="view-all-home-button">View All</Link>
         </section>
@@ -30,6 +46,6 @@ const Home = () => {
 </>
     );
 };
-
+}
 
 export default Home;

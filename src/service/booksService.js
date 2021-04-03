@@ -1,5 +1,13 @@
 const url = "http://localhost:8080/api/books";
 
+export const deleteOne = (bookId) => {
+    return fetch(`${url}/${bookId}`, {
+        method: 'DELETE',
+      })
+    .then(res => res.json())
+    .catch(error => console.log(error));
+};
+
 export const getAll = (category = '') => {
     let booksUrl = url + ((category && category !== 'all') ? `/${category}` : '');
 
@@ -36,15 +44,24 @@ export const create  = (title, author, description, imageUrl, category) => {
     });
 };
 
+export const update = (bookId, book) => {
+    return fetch(`${url}/${bookId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(book)
+    });
+};
 
 
-export const vote = (bookId, votes) => {
+export const updateRating = (bookId, rating, votes) => {
     return fetch(`${url}/${bookId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({votes})
+        body: JSON.stringify({rating, votes})
     })
         .then(res => res.json());
 };

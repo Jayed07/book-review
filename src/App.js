@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -12,6 +12,9 @@ import AddBook from './components/AddBook/AddBook';
 import MyProfile from './components/MyProfile/MyProfile';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import EditBook from './components/EditBook/EditBook';
+import DeleteSuccess from './components/DeleteSuccess/DeleteSuccess';
+import { auth } from './utils/firebase';
 
 function App() {
   return (
@@ -27,10 +30,16 @@ function App() {
         <Route exact path="/books/details/:bookId" component={Details} />
         <Route path="/books/details/:bookId/add-review" component={AddReview} />
         <Route path="/books/details/:bookId/add-rating" component={AddRating} />
+        <Route path="/books/details/:bookId/edit" component={EditBook} />
         <Route path="/create"  component={AddBook} />
+        <Route path="/deleted"  component={DeleteSuccess} />
         <Route path="/users/profile" component={MyProfile} />
         <Route path="/users/login" component={Login} />
         <Route path="/users/register" component={Register} />
+        <Route path="/logout" render={() => {
+          auth.signOut();
+          return <Redirect to="/" />
+        }} />
       </Switch>
 
       <Footer />

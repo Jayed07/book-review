@@ -5,6 +5,7 @@ import * as booksService from '../../service/booksService';
 
 const Details = ({
   match,
+  history
 }) => {
   let [book, setBook] = useState({});
 
@@ -36,8 +37,8 @@ const Details = ({
               <Link to={`/books/details/${book.id}/add-rating`} className="rating-button">Add rating</Link>
             </div>
             <div className="created-by-buttons">
-              {/* <a href="#" className="edit-button">Edit Book</a>
-              <a href="#" className="delete-button">Delete Book</a> */}
+            <Link to={`/books/details/${book.id}/edit`} className="edit-button">Edit Book</Link>
+            <button onClick={() => booksService.deleteOne(book.id).then(history.push("/deleted"))}className="delete-button">Delete Book</button>
             </div>
           </div>
         </div>
