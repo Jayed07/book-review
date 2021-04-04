@@ -3,18 +3,30 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import * as booksService from '../../service/booksService';
 
+import ReviewCard from '../ReviewCard/ReviewCard';
+
 const Details = ({
   match,
   history
 }) => {
   let [book, setBook] = useState({});
+  let [bookReviews, setBookReviews] = useState({});
+  let isNull = false;
 
   useEffect(() => {
     booksService.getOne(match.params.bookId)
     .then(res => setBook(res));
+
+    let bookReviewsList = book.reviews;
+    setBookReviews(bookReviewsList);
+
+   
   }, []);
 
-  
+  if (bookReviews === undefined) {
+    isNull = true;
+  }
+
     return (
         <main className="content-wrapper">
         <div className="details-section-wrapper">
@@ -43,6 +55,10 @@ const Details = ({
           </div>
         </div>
       </div>
+
+      <br/>      
+      <Link to={`/books/details/${book.id}/reviews`} className="review-button">View reviews</Link>
+
       </main>
     );
 };

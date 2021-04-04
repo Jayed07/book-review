@@ -6,6 +6,7 @@ import MainNavigation from './components/MainNavigation/MainNavigation';
 import Home from './components/Home/Home';
 import Books from './components/Books/Books';
 import Details from './components/Details/Details';
+import Reviews from './components/Reviews/Reviews';
 import AddReview from './components/AddReview/AddReview';
 import AddRating from './components/AddRating/AddRating';
 import AddBook from './components/AddBook/AddBook';
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/books"  component={Books} />
         <Route path="/books/:category" exact component={Books} />
         <Route exact path="/books/details/:bookId" component={Details} />
+        <Route path="/books/details/:bookId/reviews" component={Reviews} />
         <Route path="/books/details/:bookId/add-review" component={AddReview} />
         <Route path="/books/details/:bookId/add-rating" component={AddRating} />
         <Route path="/books/details/:bookId/edit" component={EditBook} />

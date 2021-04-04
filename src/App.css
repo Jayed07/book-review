@@ -2,6 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato&family=Montserrat&display=swap");
 @import "https://use.fontawesome.com/releases/v5.15.2/css/all.css";
 
+.content-wrapper {
+  margin-bottom: 200px !important;
+}
+
+.content-wrapper .centered {
+  margin: 0 auto;
+}
+
 body {
   margin: 0 auto;
   box-sizing: border-box;

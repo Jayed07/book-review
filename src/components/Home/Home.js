@@ -22,7 +22,7 @@ class Home extends Component {
   render() {
     return(
       <>
-        <div className="header-image content-wrapper">
+        <div className="header-image">
         <img src="./img/header-image.jpg" alt=""/>
         <h1>Free online book reviewer</h1>
         </div>

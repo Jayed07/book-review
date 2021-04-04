@@ -1,0 +1,14 @@
+.review-card-wrapper {
+    border: 1px solid white;
+    color: white;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.review-card-wrapper h3 {
+    border-bottom: 1px solid white;
+    margin: 0;
+    background: rgb(255, 179, 0);
+    color: black;
+}
