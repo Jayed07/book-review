@@ -6,7 +6,6 @@ const EditBook = ({
     history,
 }) => {
     const [book, setBook] = useState({});
-    //TODO errorMess
 
     useEffect(() => {
         booksService.getOne(match.params.bookId)
@@ -34,23 +33,24 @@ const EditBook = ({
             return;
         });
     }
+
     return (
         <main className="content-wrapper">
             <div className="form-container">
                 <h1>Edit Book</h1>
                 <form onSubmit={onEditSaveSubmit}>
                     <label htmlFor="title" >Book Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter book title.." defaultValue={book.title} />
-
+                    <input type="text" id="title" name="title" placeholder="Enter book title.." required minLength="3"  defaultValue={book.title} />
+                    
                     <label htmlFor="author">Author name</label>
-                    <input type="text" id="author" name="author" placeholder="Enter book author.." defaultValue={book.author}/>
-
+                    <input type="text" id="author" name="author" placeholder="Enter book author.." required defaultValue={book.author}/>
+                   
                     <label htmlFor="description">Book description</label>
-                    <textarea id="description" name="description" placeholder="Enter book description.." defaultValue={book.description}></textarea>
-
+                    <textarea id="description" name="description" placeholder="Enter book description.." required minLength="10" defaultValue={book.description}></textarea>
+                   
                     <label htmlFor="imageUrl">Image URL</label>
-                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter image url.." defaultValue={book.imageUrl} />
-
+                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter image url.." required defaultValue={book.imageUrl} />
+                   
                     <label htmlFor="category">Category</label>
                     <select id="category" name="category" defaultValue={book.category}>
                         <option value="action">Action</option>

@@ -21,16 +21,16 @@ const AddBook = ({
                 <h1>Add Book</h1>
                 <form onSubmit={onCreateBookSubmitHandler}>
                     <label htmlFor="title">Book Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter book title.." />
+                    <input type="text" id="title" name="title" required minLength="3" placeholder="Enter book title.." />
 
                     <label htmlFor="author">Author name</label>
-                    <input type="text" id="author" name="author" placeholder="Enter book author.." />
+                    <input type="text" id="author" name="author" required placeholder="Enter book author.." />
 
                     <label htmlFor="description">Book description</label>
-                    <textarea id="description" name="description" placeholder="Enter book description.."></textarea>
+                    <textarea id="description" name="description" required minLength="10" placeholder="Enter book description.."></textarea>
 
                     <label htmlFor="imageUrl">Image URL</label>
-                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter image url.." />
+                    <input type="text" id="imageUrl" name="imageUrl" required placeholder="Enter image url.." />
 
                     <label htmlFor="category">Category</label>
                     <select id="category" name="category">
