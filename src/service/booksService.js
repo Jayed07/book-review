@@ -1,3 +1,10 @@
+import {auth} from '../utils/firebase';
+
+// let user = auth.getCurrentUser();
+// let user = auth.getInstance().getCurrentUser()
+
+// console.log(user)
+
 const url = "http://localhost:8080/api/books";
 
 export const deleteOne = (bookId) => {
@@ -22,8 +29,8 @@ export const getOne = (bookId) => {
         .catch(error => console.log(error));
 };
 
-//TODO: add created by => session.username
 export const create  = (title, author, description, imageUrl, category) => {
+
     let book = {
         title: title,
         author: author,
@@ -32,7 +39,6 @@ export const create  = (title, author, description, imageUrl, category) => {
         category: category,
         rating: 0,
         votes: 0,
-
     };
 
     return fetch(url, {

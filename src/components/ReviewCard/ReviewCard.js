@@ -13,7 +13,6 @@ class ReviewCard extends Component {
 
     return(
         <div className="review-card-wrapper">
-            <h3>{ this.props.author }</h3>
             <p>{ this.props.content }</p>
         </div>
     );
